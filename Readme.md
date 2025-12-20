@@ -1,7 +1,7 @@
 # Robotics Resources {Tinkerers Lab}
 
 This repository contains a list of resources which can be used for starting with ROBOTICS.
-Disclaimer : Current Industry standard for ROS2 is ROS2 Humble.
+*Disclaimer : Current Industry standard for ROS2 is ROS2 Humble.*
 
 ## Table of Contents
 
@@ -134,6 +134,7 @@ Disclaimer : Current Industry standard for ROS2 is ROS2 Humble.
 *   [CAD CAM Tutorial Channel](https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM)
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
+
 
 
 
