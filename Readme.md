@@ -127,13 +127,14 @@ This repository contains a list of resources which can be used for starting with
 ## CAD
 
 ### Basics
-*   [Playlist 1](https://youtube.com/playlist?list=PLRhna5_X7uWsdDWnvtuIzPlK8yZKSbWJR&si=B4a_mH8ee0hNOwRJ) (Not recommended)
+*   [Playlist 1](https://youtube.com/playlist?list=PLRhna5_X7uWsdDWnvtuIzPlK8yZKSbWJR&si=B4a_mH8ee0hNOwRJ) (Not recommended to watch this completely as a tutorial)
 *   [Playlist 2](https://youtube.com/playlist?list=PLRhna5_X7uWt5SQUMmNzV0aBMiggB0ROw&si=FOt2Dh-C-hL8g9yr)
 
 ### Recommended for Parts
 *   [CAD CAM Tutorial Channel](https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM)
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
+
 
 
 
