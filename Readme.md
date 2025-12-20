@@ -1,6 +1,6 @@
 # Robotics Resources for Juniors
 
-This repository contains a curated list of resources for learning robotics, covering topics from ROS2 and Control Systems to Computer Vision and Machine Learning.
+This repository contains a list of resources which can be used for starting with ROBOTICS.
 
 ## Table of Contents
 
@@ -133,3 +133,4 @@ This repository contains a curated list of resources for learning robotics, cove
 *   [CAD CAM Tutorial Channel](https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM)
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
+
