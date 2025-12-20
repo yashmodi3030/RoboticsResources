@@ -1,6 +1,7 @@
 # Robotics Resources {Tinkerers Lab}
 
 This repository contains a list of resources which can be used for starting with ROBOTICS.
+Disclaimer : Current Industry standard for ROS2 is ROS2 Humble.
 
 ## Table of Contents
 
@@ -43,7 +44,7 @@ This repository contains a list of resources which can be used for starting with
 
 ## NAV2 and MoveIt2
 
-### NAV2 Interpolated (Foxy)
+### NAV2 Interpolated (Foxy) {You can replicate this in Humble}
 *   [Video 1](https://youtu.be/bYTawHgVoRQ?si=4V3s2oacVTsfi6WP)
 *   [Video 2](https://youtu.be/q4l_-n4BrKA?si=jQprEXufnLsR9pG7)
 *   [NAV2 Full Playlist](https://youtube.com/playlist?list=PLgG0XDQqJcknP8fhdAXxYv6AYnfqjP6WU&si=f6HEBTX65UH62DsN)
@@ -133,5 +134,6 @@ This repository contains a list of resources which can be used for starting with
 *   [CAD CAM Tutorial Channel](https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM)
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
+
 
 
