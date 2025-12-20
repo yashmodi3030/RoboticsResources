@@ -1,4 +1,4 @@
-# Robotics Resources for Juniors
+# Robotics Resources {Tinkerers Lab}
 
 This repository contains a list of resources which can be used for starting with ROBOTICS.
 
@@ -133,4 +133,5 @@ This repository contains a list of resources which can be used for starting with
 *   [CAD CAM Tutorial Channel](https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM)
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
+
 
