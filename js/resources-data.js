@@ -1,20 +1,21 @@
 /**
- * Robotics Resources - Tinkerers Lab Dataset
- * Extracted and enriched from Readme.md
+ * Robotics Resources - Tinkerer's Lab Dataset
+ * Fully updated with new recommended channels, repos, and algorithmic resources from Readme.md
  */
 
 const CATEGORIES = [
-  { id: "all", name: "All Domains", icon: "cpu", count: 36 },
-  { id: "ros2", name: "ROS2", icon: "layers", count: 8, badge: "Industry Standard: Humble" },
-  { id: "control-systems", name: "Control Systems", icon: "activity", count: 3 },
-  { id: "nav2-moveit2", name: "NAV2 & MoveIt2", icon: "compass", count: 7 },
-  { id: "slam", name: "SLAM", icon: "map-pin", count: 5 },
-  { id: "computer-vision", name: "Computer Vision", icon: "eye", count: 8 },
-  { id: "microros", name: "MicroROS", icon: "zap", count: 2 },
-  { id: "sensor-fusion", name: "Sensor Fusion", icon: "radio", count: 1 },
-  { id: "ml-robotics", name: "ML for Robotics", icon: "terminal", count: 6 },
-  { id: "docker", name: "Docker", icon: "box", count: 2 },
-  { id: "cad", name: "CAD & Modeling", icon: "box-3d", count: 4 }
+  { id: "all", name: "All Domains", icon: "cpu" },
+  { id: "ros2", name: "ROS2", icon: "layers" },
+  { id: "control-systems", name: "Control Systems", icon: "activity" },
+  { id: "nav2-moveit2", name: "NAV2 & MoveIt2", icon: "compass" },
+  { id: "slam", name: "SLAM", icon: "map-pin" },
+  { id: "computer-vision", name: "Computer Vision", icon: "eye" },
+  { id: "microros", name: "MicroROS", icon: "zap" },
+  { id: "sensor-fusion", name: "Sensor Fusion", icon: "radio" },
+  { id: "ml-robotics", name: "ML for Robotics", icon: "terminal" },
+  { id: "docker", name: "Docker", icon: "box" },
+  { id: "cad", name: "CAD & Modeling", icon: "box-3d" },
+  { id: "additional", name: "Algorithms & Notes", icon: "star" }
 ];
 
 const ROADMAP_STEPS = [
@@ -22,30 +23,27 @@ const ROADMAP_STEPS = [
     step: 1,
     phase: "phase-1",
     title: "Foundations",
-    subtitle: "Python & CAD Modeling",
-    description: "Build programming muscle memory and 3D spatial thinking before diving into robotic software.",
-    categoryIds: ["computer-vision", "cad"],
-    tags: ["python", "cad", "solidworks"],
+    subtitle: "Python, C++ & CAD",
+    description: "Build programming muscle memory and 3D mechanical spatial thinking before complex robotic frameworks.",
+    tags: ["python", "cpp", "cad", "solidworks"],
     color: "#38bdf8"
   },
   {
     step: 2,
     phase: "phase-2",
-    title: "ROS2 Humble Core",
+    title: "ROS2 Core",
     subtitle: "Architecture, TF2 & URDF",
-    description: "Master nodes, topics, services, launch scripts, and robot kinematic trees in ROS2 Humble.",
-    categoryIds: ["ros2"],
-    tags: ["ros2", "humble", "tf2", "urdf"],
+    description: "Master nodes, topics, services, lifecycle, launch scripts, and kinematics trees in ROS 2.",
+    tags: ["ros2", "tf2", "urdf", "colcon"],
     color: "#818cf8"
   },
   {
     step: 3,
     phase: "phase-3",
     title: "Controls & Embedded",
-    subtitle: "Kalman, ros2_control & MicroROS",
-    description: "Bridge high-level algorithms to hardware actuators, microcontrollers, and state estimation.",
-    categoryIds: ["control-systems", "microros", "docker"],
-    tags: ["control", "kalman", "microros", "docker"],
+    subtitle: "Kalman, Balancing & MicroROS",
+    description: "Bridge high-level algorithms to hardware actuators, microcontrollers, and feedback controllers.",
+    tags: ["control", "kalman", "microros", "pid"],
     color: "#c084fc"
   },
   {
@@ -54,8 +52,7 @@ const ROADMAP_STEPS = [
     title: "Autonomy & SLAM",
     subtitle: "NAV2, MoveIt2 & Mapping",
     description: "Implement simultaneous localization and mapping, obstacle avoidance, and robotic arm path planning.",
-    categoryIds: ["nav2-moveit2", "slam"],
-    tags: ["nav2", "moveit2", "slam", "cartographer"],
+    tags: ["nav2", "moveit2", "slam", "mapping"],
     color: "#34d399"
   },
   {
@@ -64,14 +61,199 @@ const ROADMAP_STEPS = [
     title: "Perception & AI",
     subtitle: "YOLO, Sensor Fusion & RL",
     description: "Deploy deep neural vision models, multivariant sensor filtering, and reinforcement learning.",
-    categoryIds: ["computer-vision", "sensor-fusion", "ml-robotics"],
     tags: ["yolo", "opencv", "sensor-fusion", "reinforcement-learning"],
     color: "#f472b6"
   }
 ];
 
 const RESOURCES = [
-  // --- ROS2 ---
+  // =========================================================================
+  // ROS2 - RECOMMENDED / NEW RESOURCES
+  // =========================================================================
+  {
+    id: "ros2-channel-robotics-backend",
+    title: "Robotics Back-End YouTube Channel",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "youtube",
+    typeName: "YouTube Channel",
+    url: "https://www.youtube.com/@RoboticsBackEnd",
+    author: "Robotics Back-End",
+    description: "Excellent resource for learning practical ROS 2 concepts, packages, nodes, communication protocols, and modern robotics software architecture.",
+    proTip: "One of the best structured channels for learning clean ROS 2 software development practices and debugging nodes.",
+    tags: ["ROS2", "Software Architecture", "Nodes", "Best Practices"],
+    phase: "phase-2",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-channel-articulated-robotics",
+    title: "Articulated Robotics YouTube Channel",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "youtube",
+    typeName: "YouTube Channel",
+    url: "https://www.youtube.com/@ArticulatedRobotics",
+    author: "Josh Newans",
+    description: "Highly recommended for understanding ROS 2, TF2 coordinate transforms, URDF robot modeling, Gazebo simulation, and robotics fundamentals.",
+    proTip: "The gold standard series for building a simulated mobile robot from scratch in ROS 2.",
+    tags: ["ROS2", "TF2", "URDF", "Gazebo", "Simulation"],
+    phase: "phase-2",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-channel-automatic-addison",
+    title: "Automatic Addison YouTube Channel",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "youtube",
+    typeName: "YouTube Channel",
+    url: "https://www.youtube.com/@automaticaddison",
+    author: "Automatic Addison",
+    description: "Practical hands-on tutorials covering ROS 2 navigation, sensor integration, autonomous robots, localization, and computer vision.",
+    proTip: "Excellent companion tutorials with detailed open-source code guides for physical autonomous robots.",
+    tags: ["ROS2", "Navigation", "Sensors", "Autonomous Robots"],
+    phase: "phase-4",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-channel-hummingbird19",
+    title: "Hummingbird19 Robotics Tutorials",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "youtube",
+    typeName: "YouTube Channel",
+    url: "https://www.youtube.com/@hummingbird19",
+    author: "Hummingbird19",
+    description: "Robotics-focused video tutorials and practical implementation walkthroughs for mobile robot systems.",
+    proTip: "Great for quick practical implementation references and real-world robotics hardware tips.",
+    tags: ["Robotics", "Hardware", "Tutorials", "Implementation"],
+    phase: "phase-2",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-repo-mogi-ros",
+    title: "Introduction to ROS2 - MOGI ROS Course",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2",
+    author: "MOGI-ROS",
+    description: "Structured introduction to ROS 2 concepts and workflows from MOGI, featuring clean week-by-week labs and exercises.",
+    proTip: "Great university-style course syllabus to follow if you want structured weekly progression.",
+    tags: ["ROS2", "Course", "Labs", "Academic"],
+    phase: "phase-2",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-repo-cpp-notes",
+    title: "Robotics C++ Programming Notes",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/arjunskumar/Robotics_CPP_Notes",
+    author: "Arjun S Kumar",
+    description: "Comprehensive notes and practical code snippets covering C++, Object-Oriented Programming, and ROS 2 C++ client library development.",
+    proTip: "Recommended for anyone wanting to write high-performance C++ ROS 2 nodes instead of Python.",
+    tags: ["C++", "OOP", "ROS2 C++", "Performance"],
+    phase: "phase-1",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-repo-robotic-mapping",
+    title: "Robotic Mapping Repository",
+    category: "slam",
+    categoryName: "SLAM",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/ariarobotics/robotic-mapping",
+    author: "Aria Robotics",
+    description: "Resources and algorithmic implementations related to robotic mapping, occupancy grids, and sensor fusion for mobile robots.",
+    proTip: "Essential companion reference alongside SLAM and ROS 2 navigation pipelines.",
+    tags: ["Mapping", "SLAM", "Occupancy Grid", "Algorithms"],
+    phase: "phase-4",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-repo-python-robotics",
+    title: "PythonRobotics: Robotics Algorithms in Python",
+    category: "additional",
+    categoryName: "Algorithms & Notes",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/AtsushiSakai/PythonRobotics",
+    author: "Atsushi Sakai",
+    description: "Extensive collection of Python implementations for localization, mapping, SLAM, path planning, control, and state estimation.",
+    proTip: "Use this repository to understand algorithms by implementing and modifying them yourself rather than passively reading!",
+    tags: ["Algorithms", "Path Planning", "SLAM", "Control", "Must Star ⭐"],
+    phase: "phase-4",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "ros2-student-adi-singh",
+    title: "Robotics Resources Guide (By Adi Singh, IIT Patna)",
+    category: "ros2",
+    categoryName: "ROS2",
+    type: "doc",
+    typeName: "Google Doc Guide",
+    url: "https://docs.google.com/document/d/13IF1DIAw2vzVhp5yF0hLOCHLHqKecFMKcZfHAu7RJyk/edit?usp=sharing",
+    author: "Adi Singh (IIT Patna)",
+    description: "A comprehensive robotics learning guide and curated notes compiled by Adi Singh from IIT Patna for students starting out.",
+    proTip: "A student-tested roadmap offering practical university advice and distilled starting recommendations.",
+    tags: ["IIT Patna", "Curated Guide", "Roadmap", "Student Notes"],
+    phase: "phase-2",
+    recommended: true,
+    isNew: true
+  },
+
+  // =========================================================================
+  // CONTROL SYSTEMS - RECOMMENDED / NEW RESOURCES
+  // =========================================================================
+  {
+    id: "control-pythonrobotics",
+    title: "PythonRobotics: Control Systems Module",
+    category: "control-systems",
+    categoryName: "Control Systems",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/AtsushiSakai/PythonRobotics",
+    author: "Atsushi Sakai",
+    description: "Practical implementations of robotics control algorithms in Python: LQR, Model Predictive Control (MPC), Pure Pursuit, and Stanley control.",
+    proTip: "Simulate kinematics and tracking errors directly in Python before packaging them into ROS 2 controllers.",
+    tags: ["LQR", "MPC", "Pure Pursuit", "Control Theory"],
+    phase: "phase-3",
+    recommended: true,
+    isNew: true
+  },
+  {
+    id: "control-self-balancing-robot",
+    title: "Self-Balancing Robot Project (e-Yantra)",
+    category: "control-systems",
+    categoryName: "Control Systems",
+    type: "github",
+    typeName: "GitHub Repo",
+    url: "https://github.com/e-yantra-workshops/self-balancing-robot",
+    author: "e-Yantra",
+    description: "End-to-end practical project for understanding feedback control, PID tuning, IMU complementary filtering, motor drivers, and balancing robots.",
+    proTip: "A premier physical hardware project to build after learning basic control systems and microcontrollers.",
+    tags: ["PID", "IMU", "Self-Balancing", "Hardware", "e-Yantra"],
+    phase: "phase-3",
+    recommended: true,
+    isNew: true
+  },
+
+  // =========================================================================
+  // ROS2 - EXISTING GENERAL & TUTORIALS
+  // =========================================================================
   {
     id: "ros2-awesome-repo",
     title: "Generalised ROS2 Repository (Awesome-ROS2)",
@@ -84,8 +266,7 @@ const RESOURCES = [
     description: "An extensive curated list of awesome Robot Operating System 2 (ROS 2) libraries, tools, and learning materials.",
     proTip: "A goldmine reference repository to bookmark for finding packages, drivers, and best architectural patterns.",
     tags: ["ROS2", "Curated List", "Architecture", "Open Source"],
-    phase: "phase-2",
-    stars: "Featured"
+    phase: "phase-2"
   },
   {
     id: "ros2-book",
@@ -117,16 +298,16 @@ const RESOURCES = [
   },
   {
     id: "ros2-humble-detailed-playlist",
-    title: "ROS2 Humble Detailed In-Depth Playlist",
+    title: "ROS2 Detailed In-Depth Series",
     category: "ros2",
     categoryName: "ROS2",
     type: "playlist",
     typeName: "YouTube Playlist",
     url: "https://youtube.com/playlist?list=PLSK7NtBWwmpTS_YVfjeN3ZzIxItI1P_Sr&si=JA6_GEm3rG7fJfQd",
     author: "Articulated Robotics",
-    description: "Comprehensive walkthrough of ROS2 Humble—the industry standard LTS release—covering simulation, robot descriptions, and transforms.",
-    proTip: "Don't go through everything! Focus specifically on tf2 and urdf modules first to save hours of time.",
-    tags: ["ROS2 Humble", "TF2", "URDF", "LTS Standard"],
+    description: "Comprehensive walkthrough covering simulation, robot descriptions, transforms, and mobile robot design.",
+    proTip: "Don't go through everything! Focus on important concepts such as TF2 and URDF first to save hours.",
+    tags: ["ROS2", "TF2", "URDF", "Tutorial"],
     phase: "phase-2",
     recommended: true
   },
@@ -138,7 +319,7 @@ const RESOURCES = [
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/Gg25GfA456o?si=XQF0O3Wxzi6Kpo9v",
-    author: "Tinkerers Lab Recommended",
+    author: "Tinkerer's Lab",
     description: "High-density, fast-paced single session explaining ROS2 concepts in one continuous video to get you building rapidly.",
     proTip: "Watch this before starting multi-hour playlists to get the big-picture context in a single afternoon.",
     tags: ["ROS2", "Crash Course", "Fast Track"],
@@ -152,7 +333,7 @@ const RESOURCES = [
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/HJAE5Pk8Nyw?si=XaAPTn4-ApLQIdSG",
-    author: "Tinkerers Lab Recommended",
+    author: "Tinkerer's Lab",
     description: "Companion one-shot lecture covering essential ROS2 mechanics, command line utilities, and package builds with colcon.",
     proTip: "Ideal refresher when you need to quickly recall colcon build flags and package manifest configs.",
     tags: ["ROS2", "Colcon", "CLI", "Crash Course"],
@@ -168,26 +349,28 @@ const RESOURCES = [
     url: "https://youtu.be/ViyseWFVn6M?si=6i5U50Dp21UL1hUg",
     author: "Robotics Dev",
     description: "Learn how to write dynamic Python-based ROS2 launch files, pass runtime arguments, remap topics, and debug launch failures.",
-    proTip: "Launch files are the backbone of any production robotics stack; practice parameter passing early.",
+    proTip: "Launch files are the backbone of any production stack; practice parameter passing early.",
     tags: ["Launch Files", "Python", "Debugging", "Architecture"],
     phase: "phase-2"
   },
   {
     id: "ros2-rviz2-tutorial",
-    title: "Rviz2 3D Robot Visualization Tutorial",
+    title: "RViz2 3D Robot Visualization Tutorial",
     category: "ros2",
     categoryName: "ROS2",
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/qWoGkPDg4N8?si=r_rg07i31iMtJQfd",
     author: "Robotics Dev",
-    description: "Practical guide to visualizing laser scans, point clouds, robot coordinate frames (tf), and camera streams inside Rviz2.",
-    proTip: "Keep Rviz2 open whenever you test node transforms—visual inspection catches 90% of tf2 bugs.",
-    tags: ["Rviz2", "Visualization", "TF", "Point Clouds"],
+    description: "Practical guide to visualizing laser scans, point clouds, robot coordinate frames (tf), and camera streams inside RViz2.",
+    proTip: "Keep RViz2 open whenever you test node transforms—visual inspection catches 90% of tf2 bugs.",
+    tags: ["RViz2", "Visualization", "TF", "Point Clouds"],
     phase: "phase-2"
   },
 
-  // --- Control Systems ---
+  // =========================================================================
+  // CONTROL SYSTEMS - EXISTING
+  // =========================================================================
   {
     id: "control-kalman-filter",
     title: "Kalman Filter Theory & Mathematical Foundation",
@@ -199,13 +382,13 @@ const RESOURCES = [
     author: "Specialist Lecture",
     description: "Clear and intuitive breakdown of Kalman Filters, covariance matrices, state estimation, and sensor noise suppression.",
     proTip: "Focus on understanding the Prediction vs Update step equations; this underpins robot state estimation.",
-    tags: ["Kalman Filter", "State Estimation", "Mathematics", "Probability"],
+    tags: ["Kalman Filter", "State Estimation", "Mathematics"],
     phase: "phase-3",
     recommended: true
   },
   {
     id: "control-ros2-control-visual",
-    title: "ros2_control Framework: Visual Representation",
+    title: "ROS2 Control Framework: Visual Representation",
     category: "control-systems",
     categoryName: "Control Systems",
     type: "video",
@@ -214,12 +397,12 @@ const RESOURCES = [
     author: "Robotics Architecture",
     description: "Visual architectural walkthrough of ros2_control—controller managers, hardware interfaces, and command/state interfaces.",
     proTip: "Grasping how the Resource Manager communicates with hardware plugins is key to building custom robots.",
-    tags: ["ros2_control", "Hardware Interface", "Actuators", "Controllers"],
+    tags: ["ros2_control", "Hardware Interface", "Actuators"],
     phase: "phase-3"
   },
   {
     id: "control-applied-systems-course",
-    title: "Applied Control Systems for Engineers (PID, MPC)",
+    title: "Applied Control Systems Course (PID, MPC)",
     category: "control-systems",
     categoryName: "Control Systems",
     type: "course",
@@ -227,60 +410,19 @@ const RESOURCES = [
     url: "https://www.udemy.com/course/applied-systems-control-for-engineers-modelling-pid-mpc/",
     author: "Udemy Instructor",
     description: "Comprehensive hands-on course teaching dynamic modeling, PID tuning, state-space control, and Model Predictive Control (MPC).",
-    proTip: "Great practical exercise for moving beyond naive P/PID controllers to modern predictive optimal control.",
+    proTip: "Great practical exercise for moving beyond naive PID controllers to modern predictive optimal control.",
     tags: ["PID", "MPC", "Control Theory", "Engineering"],
     phase: "phase-3"
   },
 
-  // --- NAV2 & MoveIt2 ---
-  {
-    id: "nav2-interpolated-1",
-    title: "NAV2 Interpolated Guide (Part 1)",
-    category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
-    type: "video",
-    typeName: "YouTube Video",
-    url: "https://youtu.be/bYTawHgVoRQ?si=4V3s2oacVTsfi6WP",
-    author: "Navigation Specialist",
-    description: "Explores NAV2 interpolated trajectory generation and path smoothing for mobile robots.",
-    proTip: "Demonstrated on Foxy, but cleanly replicable in ROS2 Humble with minor parameter name updates.",
-    tags: ["NAV2", "Path Planning", "Trajectories", "Mobile Robots"],
-    phase: "phase-4"
-  },
-  {
-    id: "nav2-interpolated-2",
-    title: "NAV2 Interpolated Guide (Part 2)",
-    category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
-    type: "video",
-    typeName: "YouTube Video",
-    url: "https://youtu.be/q4l_-n4BrKA?si=jQprEXufnLsR9pG7",
-    author: "Navigation Specialist",
-    description: "Continuation of NAV2 trajectory interpolation covering dynamic costmaps, obstacle inflation, and recovery behaviors.",
-    proTip: "Notice how costmap layers interact with local planners like DWB or TEB.",
-    tags: ["NAV2", "Costmaps", "Local Planner", "Recovery"],
-    phase: "phase-4"
-  },
-  {
-    id: "nav2-full-playlist",
-    title: "NAV2 Complete Video Playlist",
-    category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
-    type: "playlist",
-    typeName: "YouTube Playlist",
-    url: "https://youtube.com/playlist?list=PLgG0XDQqJcknP8fhdAXxYv6AYnfqjP6WU&si=f6HEBTX65UH62DsN",
-    author: "Autonomous Robotics Hub",
-    description: "End-to-end video tutorial series on configuring NAV2 stack for custom differential drive and ackermann robots.",
-    proTip: "Follow along step by step to tune global/local planners and behavior trees without guessing parameters.",
-    tags: ["NAV2", "Behavior Trees", "Autonomous Navigation", "Playlist"],
-    phase: "phase-4",
-    recommended: true
-  },
+  // =========================================================================
+  // NAV2 & MOVEIT2
+  // =========================================================================
   {
     id: "nav2-project-layout",
-    title: "NAV2 Project with Basic Layout (Foxy/Humble)",
+    title: "NAV2 Project with Basic Layout",
     category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
+    categoryName: "NAV2 & MoveIt2",
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/EOBbxBBDLxU?si=6Faou_hdQELxVfKH",
@@ -294,7 +436,7 @@ const RESOURCES = [
     id: "nav2-project-part-2",
     title: "NAV2 Autonomous Project (Part 2)",
     category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
+    categoryName: "NAV2 & MoveIt2",
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/V0kmKkO7tVo?si=irgDDWAQMoAQIYMx",
@@ -306,16 +448,16 @@ const RESOURCES = [
   },
   {
     id: "nav2-moveit2-manipulator",
-    title: "NAV2 & MoveIt2 Integrated Project (Mobile Manipulator)",
+    title: "NAV2 & MoveIt2 Integrated Project (Manipulator)",
     category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
+    categoryName: "NAV2 & MoveIt2",
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/EosEikbZhiM?si=rAFiwoCW53hVBqe8",
     author: "Advanced Robotics",
     description: "Integration of mobile base navigation (NAV2) with robotic arm trajectory planning (MoveIt2) for pick-and-place tasks.",
     proTip: "One of the best projects to demonstrate full-stack robotics skills on your portfolio or resume.",
-    tags: ["MoveIt2", "NAV2", "Manipulator", "Kinematics", "Cap-Stone"],
+    tags: ["MoveIt2", "NAV2", "Manipulator", "Kinematics"],
     phase: "phase-4",
     recommended: true
   },
@@ -323,7 +465,7 @@ const RESOURCES = [
     id: "nav2-mapping",
     title: "NAV2 2D/3D Grid Mapping Implementation",
     category: "nav2-moveit2",
-    categoryName: "NAV2 and MoveIt2",
+    categoryName: "NAV2 & MoveIt2",
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/rZOxPGCn4QM?si=3m7k3IUkydBIZlDk",
@@ -334,7 +476,9 @@ const RESOURCES = [
     phase: "phase-4"
   },
 
-  // --- SLAM ---
+  // =========================================================================
+  // SLAM
+  // =========================================================================
   {
     id: "slam-cartographer",
     title: "Google Cartographer ROS2",
@@ -359,8 +503,8 @@ const RESOURCES = [
     url: "https://github.com/SteveMacenski/slam_toolbox",
     author: "Steve Macenski",
     description: "The official standard SLAM package for ROS2, featuring lifetime mapping, synchronous/asynchronous modes, and serialization.",
-    proTip: "Currently the default and recommended SLAM algorithm for ROS2 Humble navigation pipelines.",
-    tags: ["SLAM Toolbox", "ROS2 Standard", "Lifelong Mapping", "Lidar"],
+    proTip: "Currently the default and recommended SLAM algorithm for ROS 2 navigation pipelines.",
+    tags: ["SLAM Toolbox", "ROS2 Standard", "Lifelong Mapping"],
     phase: "phase-4",
     recommended: true
   },
@@ -374,7 +518,7 @@ const RESOURCES = [
     url: "https://github.com/Project-MANAS/slam_gmapping",
     author: "Project MANAS",
     description: "ROS2 port of the classic Rao-Blackwellized particle filter SLAM algorithm for 2D laser range finders.",
-    proTip: "Great for educational understanding of particle filter based mapping in simpler structured indoor spaces.",
+    proTip: "Great for educational understanding of particle filter based mapping in structured indoor spaces.",
     tags: ["GMapping", "Particle Filter", "Laser", "Project MANAS"],
     phase: "phase-4"
   },
@@ -407,7 +551,9 @@ const RESOURCES = [
     phase: "phase-4"
   },
 
-  // --- Computer Vision ---
+  // =========================================================================
+  // COMPUTER VISION
+  // =========================================================================
   {
     id: "cv-python-oneshot",
     title: "Python One Shot Rapid Tutorial",
@@ -418,7 +564,7 @@ const RESOURCES = [
     url: "https://youtu.be/vLqTf2b6GZw?si=v6ktqDFBv135Eo0z",
     author: "Programming Channel",
     description: "Speedrun covering Python syntax, data structures, functions, and OOP to prepare for scripting robotics nodes.",
-    proTip: "Any 1-2 hr one-shot is enough to get syntax ideas. Don't get stuck in tutorial loops; jump straight into code!",
+    proTip: "Any 1–2 hour Python one-shot is enough to get basic syntax ideas. Jump straight into code!",
     tags: ["Python", "Beginner", "Crash Course", "Syntax"],
     phase: "phase-1"
   },
@@ -432,7 +578,7 @@ const RESOURCES = [
     url: "https://youtube.com/playlist?list=PLGs0VKk2DiYyXlbJVaE8y1qr24YldYNDm&si=qdW0cyqXadH0A_ET",
     author: "Paul McWhorter / Specialist",
     description: "Comprehensive hands-on OpenCV series covering image transformations, color thresholds, edge detection, and contours.",
-    proTip: "Start directly from video 6 if your OpenCV environment is already installed. Watch at 2x speed for maximum efficiency!",
+    proTip: "Start directly from video 6 if setup is already done. Watch at 2x speed for maximum efficiency!",
     tags: ["OpenCV", "Image Processing", "Contours", "Thresholding"],
     phase: "phase-5",
     recommended: true
@@ -444,7 +590,7 @@ const RESOURCES = [
     categoryName: "Computer Vision",
     type: "video",
     typeName: "YouTube Video",
-    url: "https://youtu.be/5Vo4usE4-HA?si=XaGiShUgossLGWzs",
+    url: "https://youtu.be/5Vo4usE4-HA?si=XaAPTn4-ApLQIdSG",
     author: "Computer Vision Specialist",
     description: "Single-video comprehensive guide to OpenCV concepts, covering morphology, blurring, Hough transforms, and video capture.",
     proTip: "A great alternative single-video format if you prefer watching one continuous video instead of a playlist.",
@@ -475,7 +621,7 @@ const RESOURCES = [
     url: "https://youtu.be/2dH_qjc9mFg?si=xeceVB37z_mfDhrq",
     author: "Deep Learning Series",
     description: "Covers convolution kernels, pooling layers, feature maps, and modern architectures (ResNet, VGG).",
-    proTip: "Watch videos 40 to 50 for the meat of CNNs. Understanding backpropagation mathematically is optional for practical robotics!",
+    proTip: "Watch videos 40 to 50 for the meat of CNNs. Backpropagation is optional for practical robotics!",
     tags: ["CNN", "Deep Learning", "Kernels", "Feature Maps"],
     phase: "phase-5"
   },
@@ -487,7 +633,7 @@ const RESOURCES = [
     type: "video",
     typeName: "YouTube Video",
     url: "https://youtu.be/aircAruvnKk?si=49MO5-nBkOSlRT3J",
-    author: "3Blue1Brown style intuition",
+    author: "Intuitive Math",
     description: "Visually stunning conceptual explanation of weights, biases, activations, and gradient descent.",
     proTip: "Essential conceptual viewing if you've ever found neural network math intimidating.",
     tags: ["Neural Networks", "Deep Learning", "Intuition"],
@@ -503,7 +649,7 @@ const RESOURCES = [
     url: "https://youtu.be/svn9-xV7wjk?si=dVQAaExX0Bn8FzdY",
     author: "Vision AI",
     description: "Training and running real-time YOLO object detection models for edge robotics and camera streams.",
-    proTip: "Use ONNX or TensorRT export when deploying YOLO to resource-constrained robot computers like Jetson Nano.",
+    proTip: "Use ONNX or TensorRT export when deploying YOLO to resource-constrained robot computers.",
     tags: ["YOLO", "Object Detection", "Edge AI", "Real-Time"],
     phase: "phase-5"
   },
@@ -531,12 +677,14 @@ const RESOURCES = [
     url: "https://youtu.be/HHHkh9IOqhI?si=ynfXlWlwgICtsh76",
     author: "Computer Vision Dev",
     description: "Extracting text labels, barcodes, and signs from camera images using Tesseract and pytesseract.",
-    proTip: "Or use any tutorial to setup pytesseract—ensure you apply bilateral filtering to improve OCR accuracy on noisy camera feeds.",
+    proTip: "Or use any recent tutorial to set up pytesseract—ensure you apply bilateral filtering to improve accuracy.",
     tags: ["OCR", "Tesseract", "pytesseract", "Text Recognition"],
     phase: "phase-5"
   },
 
-  // --- MicroROS ---
+  // =========================================================================
+  // MICROROS
+  // =========================================================================
   {
     id: "microros-arduino",
     title: "micro-ROS for Arduino Ecosystem",
@@ -546,8 +694,8 @@ const RESOURCES = [
     typeName: "GitHub Repo",
     url: "https://github.com/micro-ROS/micro_ros_arduino",
     author: "micro-ROS Project",
-    description: "Brings ROS2 directly to microcontrollers (ESP32, Teensy, SAMD) with native publisher/subscriber support over serial or Wi-Fi.",
-    proTip: "The most practical bridge for reading encoders, IMUs, and controlling motor PWM pins directly inside ROS2 topics.",
+    description: "Brings ROS 2 directly to microcontrollers (ESP32, Teensy, SAMD) with native publisher/subscriber support over serial or Wi-Fi.",
+    proTip: "The most practical bridge for reading encoders, IMUs, and controlling motor PWM pins directly inside ROS 2 topics.",
     tags: ["micro-ROS", "Arduino", "ESP32", "Microcontrollers", "Embedded"],
     phase: "phase-3",
     recommended: true
@@ -567,10 +715,12 @@ const RESOURCES = [
     phase: "phase-3"
   },
 
-  // --- Sensor Fusion ---
+  // =========================================================================
+  // SENSOR FUSION
+  // =========================================================================
   {
     id: "sensor-fusion-course",
-    title: "Self Driving & ROS 2: Odometry & Sensor Fusion",
+    title: "Self Driving and ROS 2: Odometry & Sensor Fusion",
     category: "sensor-fusion",
     categoryName: "Sensor Fusion",
     type: "course",
@@ -578,13 +728,15 @@ const RESOURCES = [
     url: "https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-odometry-control/?couponCode=CM251217G1",
     author: "Learn by Doing",
     description: "Comprehensive hands-on course covering robot odometry, IMU sensor fusion using robot_localization EKF, and differential drive control.",
-    proTip: "Exceptionally good for mastering odometry calibration and configuring the robot_localization Extended Kalman Filter.",
+    proTip: "Good for odometry and sensor fusion. Exceptionally good for mastering odometry calibration.",
     tags: ["Sensor Fusion", "EKF", "Odometry", "IMU", "robot_localization"],
     phase: "phase-5",
     recommended: true
   },
 
-  // --- Machine Learning for Robotics ---
+  // =========================================================================
+  // MACHINE LEARNING FOR ROBOTICS
+  // =========================================================================
   {
     id: "ml-robotics-playlist",
     title: "Machine Learning in Robotics Complete Course",
@@ -595,7 +747,7 @@ const RESOURCES = [
     url: "https://youtube.com/playlist?list=PLlqdnFs9xNwrAV19_HN0itHVKy09uR7dV&si=5DDwMhJTKiyTSPu5",
     author: "Academic Lecturer",
     description: "Comprehensive playlist covering regression, clustering, neural policies, and reinforcement learning tailored for roboticists.",
-    proTip: "Don't try to binge the entire course at once—learn topics modularly as needed for your specific robotics sub-problem.",
+    proTip: "Learn topics as needed for your specific robotics sub-problem rather than binging the whole course.",
     tags: ["Machine Learning", "Robotics", "Policies", "Lectures"],
     phase: "phase-5"
   },
@@ -622,8 +774,8 @@ const RESOURCES = [
     typeName: "YouTube Video",
     url: "https://www.youtube.com/live/XDw03aM6FeQ?si=3XWO0aJg9_VZ2MZO",
     author: "Live AI Masterclass",
-    description: "Interactive session diving into policy gradient methods (PPO, SAC) and their application in simulation environments like Isaac Gym and MuJoCo.",
-    proTip: "PPO (Proximal Policy Optimization) and SAC (Soft Actor-Critic) are the premier algorithms for continuous robotic joint control.",
+    description: "Interactive session diving into policy gradient methods (PPO, SAC) and application in simulation environments like Isaac Gym.",
+    proTip: "PPO and SAC are the premier algorithms for continuous robotic joint control.",
     tags: ["Deep RL", "PPO", "SAC", "Continuous Control"],
     phase: "phase-5"
   },
@@ -666,7 +818,7 @@ const RESOURCES = [
     url: "https://arxiv.org/abs/1811.06711",
     author: "ArXiv Researchers",
     description: "Foundational research paper exploring end-to-end motor control policies learned directly from visual and proprioceptive inputs.",
-    proTip: "Compare end-to-end policy learning against modular classical pipelines (perception -> planning -> control) to understand trade-offs.",
+    proTip: "Compare end-to-end policy learning against modular classical pipelines to understand trade-offs.",
     tags: ["ArXiv", "Research Paper", "End-to-End", "Motor Control"],
     phase: "phase-5"
   },
@@ -679,13 +831,15 @@ const RESOURCES = [
     typeName: "Google Documentation / Course",
     url: "https://developers.google.com/machine-learning/crash-course/neural-networks",
     author: "Google Developers",
-    description: "Interactive visual modules from Google engineers explaining nonlinear transformations, loss functions, learning rates, and regularization.",
+    description: "Interactive visual modules explaining nonlinear transformations, loss functions, learning rates, and regularization.",
     proTip: "Interactive browser widgets allow you to manipulate hyper-parameters in real time without configuring local GPUs.",
     tags: ["Google ML", "Neural Networks", "Free Course", "Interactive"],
     phase: "phase-5"
   },
 
-  // --- Docker ---
+  // =========================================================================
+  // DOCKER
+  // =========================================================================
   {
     id: "docker-ros2-openslice",
     title: "Docker ROS2 OpenSplice / Cyclone DDS Container",
@@ -695,14 +849,14 @@ const RESOURCES = [
     typeName: "GitHub Repo",
     url: "https://github.com/Adlink-ROS/docker-ros2-ospl-ce",
     author: "Adlink-ROS",
-    description: "Production-ready Dockerfiles configured for ROS2 DDS communication, zero-configuration networking, and containerized deployment.",
+    description: "Production-ready Dockerfiles configured for ROS 2 DDS communication, zero-configuration networking, and containerized deployment.",
     proTip: "Eliminates 'works on my machine' problems across different Linux distributions and team workstations.",
     tags: ["Docker", "DDS", "Containerization", "DevOps"],
     phase: "phase-3"
   },
   {
     id: "docker-microros",
-    title: "micro-ROS Official Docker Environment",
+    title: "Micro-ROS Official Docker Environment",
     category: "docker",
     categoryName: "Docker",
     type: "github",
@@ -716,12 +870,14 @@ const RESOURCES = [
     recommended: true
   },
 
-  // --- CAD & Modeling ---
+  // =========================================================================
+  // CAD & MODELING
+  // =========================================================================
   {
     id: "cad-basics-playlist-1",
     title: "CAD Modeling Fundamentals (Playlist 1)",
     category: "cad",
-    categoryName: "CAD",
+    categoryName: "CAD & Modeling",
     type: "playlist",
     typeName: "YouTube Playlist",
     url: "https://youtube.com/playlist?list=PLRhna5_X7uWsdDWnvtuIzPlK8yZKSbWJR&si=B4a_mH8ee0hNOwRJ",
@@ -735,7 +891,7 @@ const RESOURCES = [
     id: "cad-basics-playlist-2",
     title: "CAD Modeling Secondary Series (Playlist 2)",
     category: "cad",
-    categoryName: "CAD",
+    categoryName: "CAD & Modeling",
     type: "playlist",
     typeName: "YouTube Playlist",
     url: "https://youtube.com/playlist?list=PLRhna5_X7uWt5SQUMmNzV0aBMiggB0ROw&si=FOt2Dh-C-hL8g9yr",
@@ -749,7 +905,7 @@ const RESOURCES = [
     id: "cad-cam-channel",
     title: "CAD CAM Tutorial Channel (By Mahtab Alam)",
     category: "cad",
-    categoryName: "CAD",
+    categoryName: "CAD & Modeling",
     type: "youtube",
     typeName: "YouTube Channel",
     url: "https://www.youtube.com/@CADCAMTUTORIALBYMAHTABALAM",
@@ -764,13 +920,13 @@ const RESOURCES = [
     id: "cad-recommended-playlist",
     title: "Recommended CAD Parts Practical Exercises",
     category: "cad",
-    categoryName: "CAD",
+    categoryName: "CAD & Modeling",
     type: "playlist",
     typeName: "YouTube Playlist",
     url: "https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ",
     author: "CAD CAM Tutorial",
     description: "Curated collection of practical component designs—gears, brackets, housings, robot chassis, and mechanical links.",
-    proTip: "Start CAD by doing the parts side-by-side from the initial 2D sketch! Hands-on practice beats passive video watching every time.",
+    proTip: "Start CAD by doing the parts side by side from the initial sketch! Hands-on practice beats passive video watching every time.",
     tags: ["Parts Modeling", "Robot Chassis", "Gears", "Practical Exercises"],
     phase: "phase-1",
     recommended: true

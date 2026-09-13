@@ -271,7 +271,10 @@
     return `
       <article class="resource-card" data-id="${res.id}">
         <div class="card-top-meta">
-          <span class="domain-badge">${res.categoryName}</span>
+          <div style="display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap;">
+            <span class="domain-badge">${res.categoryName}</span>
+            ${res.recommended || res.isNew ? `<span class="domain-badge" style="background: var(--accent-subtle); color: var(--accent-primary); border-color: var(--border-active);">⭐ Recommended</span>` : ""}
+          </div>
           <span class="type-badge">${res.typeName}</span>
         </div>
 
