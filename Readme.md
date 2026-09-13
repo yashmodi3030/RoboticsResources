@@ -1,5 +1,11 @@
 # Robotics Resources {Tinkerers Lab}
 
+[![Live Showcase Website](https://img.shields.io/badge/Live_Website-Robotics_Resources-00f2fe?style=for-the-badge&logo=google-chrome&logoColor=black)](https://yashmodi3030.github.io/RoboticsResources/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Automated_Deploy-10b981?style=for-the-badge&logo=github-actions&logoColor=white)](https://yashmodi3030.github.io/RoboticsResources/)
+
+> 🌐 **Interactive Showcase Website**: Explore the full-fledged, interactive website with real-time search, 5-stage learning roadmaps, instant category filters, and bookmarking:  
+> 👉 **[https://yashmodi3030.github.io/RoboticsResources/](https://yashmodi3030.github.io/RoboticsResources/)**
+
 This repository contains a list of resources which can be used for starting with ROBOTICS.
 *Disclaimer : Current Industry standard for ROS2 is ROS2 Humble.*
 
@@ -135,7 +141,21 @@ This repository contains a list of resources which can be used for starting with
 *   [Recommended Playlist](https://youtube.com/playlist?list=PLRhna5_X7uWuIMRdqUG9gqKwBKI1Hr__X&si=bprle54qp9ZuLOfQ)
     *   *Start CAD by doing the parts side by side from the initial sketch.*
 
+---
 
+## 🚀 GitHub Pages Deployment
 
+The repository includes a web application showcasing these robotics resources with an interactive node canvas, real-time search, learning roadmap, and bookmarking.
 
-
+### How to Enable GitHub Pages:
+1. Push this repository to GitHub:
+   ```bash
+   git add .
+   git commit -m "Add interactive robotics resources showcase website"
+   git push origin main
+   ```
+2. Navigate to **Settings** &rarr; **Pages** in your GitHub repository:
+   - **Source**: Select **GitHub Actions** (or select *Deploy from a branch*, choose `main`, and select `/ (root)` folder).
+   - Click **Save**.
+3. Your website will be live at:
+   **`https://yashmodi3030.github.io/RoboticsResources/`**
